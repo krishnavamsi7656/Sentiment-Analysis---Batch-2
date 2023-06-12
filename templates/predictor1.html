@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .centered {
+        position: relative;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        color: white;
+      }
+      input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+      .header {
+        color: black;
+      }
+
+      p {
+        color: #111;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 14px;
+        line-height: 24px;
+        margin: 0 0 24px;
+        text-justify: inter-word;
+      }
+
+      h1 {
+        color: #111;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 36px;
+        font-weight: bold;
+        letter-spacing: -1px;
+        line-height: 1;
+        text-align: center;
+      }
+
+      #demo {
+        color: #111;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 22px;
+        line-height: 24px;
+        margin: 0 0 24px;
+        text-justify: inter-word;
+      }
+      .button {
+			display: inline-block;
+			background-color: #007bff;
+			color: #fff;
+			padding: 10px 20px;
+			border-radius: 5px;
+			text-align: center;
+			text-decoration: none;
+			font-size: 18px;
+			margin: 10px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+		.button:hover {
+			background-color: #0062cc;
+		}
+
+      .form-div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      body{
+        background-size: cover;
+        background-attachment: fixed;
+
+        
+    }
+    </style>
+  </head>
+  <body background="{{bgIm}}">
+    <div class="container mt-5">
+      <div class="centered">
+        <div class="text-center text-white">
+          <title>Sentiment Predictor</title>
+        </div>
+        <h1 class="header" style="color: #ffffff">Sentiment Predictor</h1>
+
+        <p class="header" style="color: #ffffff">
+            <h2> Predictor is a tool which processes your feedback and automatically interprets whether it's positive, negative, or neutral.<br>
+            For the Predictor VADER (Valence Aware Dictionary and Sentiment Reasoner) lexicon tool is used. A sentiment lexicon is a list of lexical features (e.g., words) which are generally labeled according to their semantic orientation as either positive or negative.
+            </h2>
+        </p>
+
+        <form method="POST" onSubmit="return validate();" class="form">
+          <div class="form-div">
+            <input type="text" name="text" class="form-control mr-2" />
+            <button type="submit" class="button" onclick="this.form.submit();">
+              Submit
+            </button>
+          </div>
+        </form>
+        <br />
+        <br />
+
+        <p id="demo">{{ variable }}</p>
+      </div>
+    </div>
+  </body>
+</html>

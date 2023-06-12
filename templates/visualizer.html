@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title style="color: white;"> Sentiment Visualizer </title>
+<style>
+	* {
+	  box-sizing: border-box;
+	}
+	
+	.row {
+	  display: flex;
+	}
+	
+	/* Create three equal columns that sits next to each other */
+	.column {
+	  flex: 38.33%;
+	  padding: 4px;
+	}
+	p {
+ 		width: 1100px;
+  		padding: 15px;
+  		border: 5px solid rgb(233, 18, 18);
+  		margin: 5px;
+	}
+	img {
+		background: #f7f712;
+  		border: 1px solid #253be1;
+  		float: center;
+  		margin: 8px 0 0 20px;
+	  	padding: 4px;
+	 	width: 200px;
+	}
+
+	body{
+        background-size: cover;
+        background-attachment: fixed;        
+    }
+</style>
+</head>
+
+<body background="{{bgImg}}">
+
+	<center>
+        <h1 style="color: white;">Sentiment Visualizer</h1>      
+    </center>
+	<ol>
+		<li><h2 style="color: white;"><b>Datasets</b></h2></li>
+		<ul>
+			<li><h3 style="color: white;"><b>Training Dataset Visualization</b></h3></li>
+			<h3 style="color: white;"><b>  &#8594; About Dataset</b></h3>
+			<p style="font-family:Arial, Helvetica, sans-serif; background-color:white;">
+
+				This dataset contains information about Product name, Product price, Rate, Reviews, Summary and Sentiment in csv format. There are 104 different types of products of flipkart.com such as electronics items, clothing of men, women and kids, Home decor items, Automated systems, so on. It has 205053 rows and 6 columns. Also, if any product doesn't have any review but summary is present then Nan value already added to its blank space.
+				This dataset has multiclass label as sentiment such as positive, neutral amd negative.The sentiment given was based on column called Summary using NLP and Vader model. Also, after that we manually check the label and put it into the appropriate categories like if summary has text like okay, just ok or one positive and negative we labeled as neutral for better understanding while using this dataset for human languages. On the summary and price column, data cleaning method is already performed using python module called NumPy and Pandas which are famous.You can learn it also through any online resource.
+				Data was collected through web scraping using the library called beautifulsoup from flipkart.com. The scraping done in december 2022.
+				<b>Columns:</b>
+					<br><b>Product_name</b> &#8594; Name of the product.<br>
+					Product_price:Price of the product.
+					Rate: Customer's rating on product(Between 1 to 5).
+					Review: Customer's review on each product.
+					Summary: This columne include descriptive informationn of customer's thought on each product.
+					Sentiment: This column contains 3 label such as Positive, Negative and Neutral(Which was given based on Summary).
+			</p>
+			<br>
+			<div class="row">
+				<div class="column">
+				  <center><img src="{{trainDs}}" title="Training Dataset Instance"alt="Snow" style="width: 80%"></center>
+				</div>
+			</div>
+			 <a style="color: #f7f712;" href="https://www.kaggle.com/datasets/niraliivaghani/flipkart-product-customer-reviews-dataset" target="_blank"><b><h3>&#8594; Training Dataset Link</h3></b></a>
+			<hr>
+			<div class="row">
+				<div class="column">
+				  <img src="{{trainSenti}}" title="Bar Graph of Training Dataset - Sentiment" alt="Mountains" style="width:90%">
+				</div>
+				<div class="column">
+				  <img src="{{trainSentiRating}}" title="Bar Graph of Ratings" alt="Mountains" style="width:90%">
+				</div>
+			</div>
+
+			<li><h3 style="color: white;"><b>Testing Dataset Visualization</b></h3></li>
+			<h3 style="color: white;"><b>  &#8594; About Dataset</b></h3>
+
+			<p style="font-family:Arial, Helvetica, sans-serif; background-color: white;">
+
+				Welcome. This is a Women's Clothing E-Commerce dataset revolving around the reviews written by customers. Its nine supportive features offer a great environment to parse out the text through its multiple dimensions. Because this is real commercial data, it has been anonymized, and references to the company in the review text and body have been replaced with “retailer”.
+				<b>Columns:</b>
+				This dataset includes 23486 rows and 10 feature variables. Each row corresponds to a customer review, and includes the variables:
+
+				Clothing ID: Integer Categorical variable that refers to the specific piece being reviewed.
+				Age: Positive Integer variable of the reviewers age.
+				Title: String variable for the title of the review.
+				Review Text: String variable for the review body.
+				Rating: Positive Ordinal Integer variable for the product score granted by the customer from 1 Worst, to 5 Best.
+				Recommended IND: Binary variable stating where the customer recommends the product where 1 is recommended, 0 is not recommended.
+				Positive Feedback Count: Positive Integer documenting the number of other customers who found this review positive.
+				Division Name: Categorical name of the product high level division.
+				Department Name: Categorical name of the product department name.
+				Class Name: Categorical name of the product class name.
+			</p>
+			<div class="row">
+				<div class="column">
+				  <center><img src="{{testDs}}" title="Training Dataset Instance" alt="Snow" style="width: 900px"></center>
+				</div>
+			</div>
+			 <a style="color: #f7f712;" href="https://www.kaggle.com/datasets/nicapotato/womens-ecommerce-clothing-reviews" target="_blank"><b><h3>&#8594; Testing Dataset Link</h3></b></a>
+			<hr>
+		</ul>
+		<li><h2 style="color: white;"><b>Results</b></h2></li>
+			<div class="row">
+				<div class="column">
+				  <img src="{{testSenti}}" title="Bar Graph of Tested Dataset - Sentiment"alt="Snow" style="width: 90%">
+				</div>
+				<div class="column">
+				  <img src="{{testPercent}}" title="Pie Chart of Sentiment Percentage" alt="Mountains" style="width:82%">
+				</div>
+			</div>
+			<div class="column">
+				<center><img src="{{testPie}}" title="Pie Chart of Sentiments"alt="Snow" style="width: 40%"></center>
+			  </div>
+		</ul>
+	</ol>
+
+</body> 
+</html>
