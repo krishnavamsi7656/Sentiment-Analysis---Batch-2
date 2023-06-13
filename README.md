@@ -7,14 +7,16 @@ We have used SVM Classifier and have done training and testing on the datasets.
 
 The output home page of the project goes as: 
 
-![image](https://github.com/krishnavamsi7656/Sentiment-Analysis---Batch-2/assets/120527023/4d11ea26-e932-4d9e-b121-c3d28df66388)
+![image](https://github.com/krishnavamsi7656/Sentiment-Analysis---Batch-2/assets/120527023/59192c99-a73d-4a3f-b059-5f73a37d794d)
+
 
 
 The Predictor page output goes as:
 
-![image](https://github.com/krishnavamsi7656/Sentiment-Analysis---Batch-2/assets/120527023/8e5f834b-9a3f-4fe8-9fd9-1d5bc739bab5)
+![image](https://github.com/krishnavamsi7656/Sentiment-Analysis---Batch-2/assets/120527023/47414f85-66cb-4bee-bd04-23382e28d131)
 
 
 The Visualiser page output goes as:
 
-![image](https://github.com/krishnavamsi7656/Sentiment-Analysis---Batch-2/assets/120527023/80baa216-5922-44d1-94ae-f571426a4a44)
+![visualiserPage](https://github.com/krishnavamsi7656/Sentiment-Analysis---Batch-2/assets/120527023/04bcaf36-7d52-411f-81e2-789ca8c956a7)
+
